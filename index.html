@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore the World</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 1rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin: 0 1rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ff6b6b;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      background-color: #fff;
+      height: 3px;
+      width: 25px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('images/1950220.jpg') no-repeat center center/cover;
+      height: 100vh;
+      color: #2c3e50;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
+
+    .cta-button {
+      background: #ff6b6b;
+      color: #fff;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #ff4e4e;
+    }
+
+    /* Destination Section */
+    #destinations {
+      padding: 2rem;
+      background-color: #ecf0f1;
+      text-align: center;
+    }
+
+    .destination-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .destination-box {
+      width: 300px;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .destination-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .destination-box img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Tours Section */
+    #tours {
+      padding: 2rem;
+      background-color: #f7f7f7;
+      text-align: center;
+    }
+
+    .tour-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .tour-box {
+      width: 300px;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .tour-button {
+      background: #3498db;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .tour-button:hover {
+      background: #2980b9;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    /* Responsive Media Queries */
+    @media screen and (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .destination-container,
+      .tour-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Wanderlust</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#tours">Tours</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1><b><u>Discover Amazing Places</u></b></h1>
+    <p><b>Your adventure starts here. Explore the world with us.</b></p>
+    <a href="#destinations" class="cta-button">Explore Destinations</a>
+  </section>
+
+  <section id="destinations">
+    <h2>Popular Destinations</h2>
+    <div class="destination-container">
+      <div class="destination-box">
+        <img src="images/paris.jpg" alt="Paris">
+        <h3>Paris</h3>
+        <p>The city of love and lights.</p>
+      </div>
+      <div class="destination-box">
+        <img src="images/bali.jpg" alt="Bali">
+        <h3>Bali</h3>
+        <p>A tropical paradise.</p>
+      </div>
+      <div class="destination-box">
+        <img src="images/new.jpg" alt="New York">
+        <h3>New York</h3>
+        <p>The city that never sleeps.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tours">
+    <h2>Exclusive Tours</h2>
+    <div class="tour-container">
+      <div class="tour-box">
+        <img src="images/Europe.jpg">
+        <h3>European Getaway</h3>
+        <p>Explore Europe in 15 days with expert guides.</p>
+        <a href="#" class="tour-button">Learn More</a>
+      </div>
+      <div class="tour-box">
+        <img src="images/aisa.jpg">
+        <h3>Asian Adventure</h3>
+        <p>Discover the wonders of Asia in an unforgettable journey.</p>
+        <a href="#" class="tour-button">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: travel@wanderlust.com | Phone: +123-456-7890</p>
+    <p>&copy; 2024 Wanderlust. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
